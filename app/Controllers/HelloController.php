@@ -20,6 +20,6 @@ class HelloController
 
     public function hello()
     {
-        return "Hello " . $this->_antony->getName();
+        include __DIR__ . '/../Views/hello.php';
     }
 }
