@@ -8,6 +8,6 @@
     </style>
 </head>
 <body>
-    <h1> <?php echo "Hello " . $this->_antony->getname(); ?> </h1>
+    <h1> <?php echo "Hello " . $this->_user->getname(); ?> </h1>
 </body>
 </html>

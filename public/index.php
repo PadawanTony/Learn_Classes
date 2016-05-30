@@ -3,7 +3,5 @@ require_once __DIR__ . '/../vendor/autoload.php';
 
 use Learn\Controllers\HelloController;
 
-
-
-$hc = new HelloController();
-echo $hc->hello();
+$hc = new HelloController('Antony Kalogeropoulos');
+$hc->hello();

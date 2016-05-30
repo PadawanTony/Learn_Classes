@@ -11,11 +11,11 @@ use Learn\Models\User;
 
 class HelloController
 {
-    private $_antony;
+    private $_user;
 
-    public function __construct()
+    public function __construct($name)
     {
-        $this->_antony = new User('Antony Kalogeropoulos');
+        $this->_user = new User($name);
     }
 
     public function hello()
