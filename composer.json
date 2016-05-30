@@ -1,0 +1,17 @@
+{
+    "name": "antony/learn_classes",
+    "description": "Learn how to use classes, namespacing, and routing",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Antony Kalogeropoulos",
+            "email": "anthonykalogeropoulos@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Learn\\": "app/"
+        }
+    }
+}
