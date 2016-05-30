@@ -1,18 +1,28 @@
 <?php
 require_once __DIR__ . '/../vendor/autoload.php';
 
-//use Learn\Controllers\HelloController;
+use Learn\Controllers;
+use Learn\Router;
 
-$path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+$router = new Router\Router();
 
-if ($path == '/public/'){
-    $hc = new Learn\Controllers\HelloController('Antony Kalogeropoulos');
-    $hc->hello();
-}
+/**
+ * Trying with objects
+ */
+//$router->add('/', new Controllers\HelloController('Antony From Home Router'));
+//$router->add('/about', new Controllers\HelloController('Antony From About Router'));
+//$router->add('/contact', new Controllers\ContactController('Antony From Contact Router'));
 
-if ($path == '/public/contact'){
-    $cc = new Learn\Controllers\ContactController('Antony Kalogeropoulos');
-    $cc->contactDetails();
-}
+/**
+ * Trying with Strings
+ */
+$router->add('/', 'HelloController');
+$router->add('/about', 'HelloController');
+$router->add('/contact', 'ContactController');
 
+//See inside $router
+echo "<pre>";
+print_r($router);
+
+$router->submit();
 
