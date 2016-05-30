@@ -1,12 +1,7 @@
 <?php
 require_once __DIR__ . '/../vendor/autoload.php';
 
-use Learn\Models\User;
+use Learn\Controllers\HelloController;
 
-$antony = new User('Antony Kalogeropoulos');
-echo "Hello " . $antony->getName();
-echo "<br/>";
-
-echo "You are " . $antony->login();
-echo "<br/>";
-echo "You are " . $antony->logout();
+$hc = new HelloController();
+echo $hc->hello();
