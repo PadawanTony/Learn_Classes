@@ -3,11 +3,10 @@
     <title> Learn_Classes </title>
     <style>
         body {
-            text-align: center;
         }
     </style>
 </head>
 <body>
-    <h1> <?php echo "Hello " . $this->_user->getname(); ?> </h1>
+    <h1> <?php echo "Hello " . $this->_user->getname() . ' From hello.php'; ?> </h1>
 </body>
 </html>

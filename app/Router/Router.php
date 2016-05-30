@@ -37,17 +37,17 @@ class Router
         {
             if (preg_match("#^$value$#", $path))
             {
-//                echo $key . ' => ' . $value; //See what the $path returns
+                //echo $key . ' => ' . $value; //See what the $path returns
+
                 //Instantiate Controller
                 $controller = 'Learn\Controllers\\' . $this->_controller[$key];
-                $controller = new $controller('Bunny');
+                $controller = new $controller();
 
+                //Call the appropriate method
                 $method = $this->_method[$key];
                 $controller->$method();
             }
         }
-
-
-        
     }
+
 }

@@ -13,13 +13,18 @@ class HelloController
 {
     private $_user;
 
-    public function __construct($name)
+    public function __construct()
     {
-        $this->_user = new User($name);
+        $this->_user = new User('Antony'); //Get name from $_POST
     }
 
     public function hello()
     {
         include __DIR__ . '/../Views/hello.php';
+    }
+    
+    public function about() 
+    {
+        include __DIR__ . '/../Views/about.php';
     }
 }

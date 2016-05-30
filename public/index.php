@@ -17,7 +17,7 @@ $router = new Router\Router();
  * Trying with Strings
  */
 $router->add('/', 'HelloController', 'hello');
-$router->add('/about', 'HelloController', 'hello');
+$router->add('/about', 'HelloController', 'about');
 $router->add('/contact', 'ContactController', 'contactDetails');
 
 //See inside $router
