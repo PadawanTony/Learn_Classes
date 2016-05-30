@@ -1,2 +1,2 @@
 # Learn_Classes
-Learn to use PHP classes, namespacing, and routing
+This project contains simple examples of inheritance in classes, custom namespacing and autoload, and a simple custom-made router.
