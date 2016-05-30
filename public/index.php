@@ -16,9 +16,9 @@ $router = new Router\Router();
 /**
  * Trying with Strings
  */
-$router->add('/', 'HelloController');
-$router->add('/about', 'HelloController');
-$router->add('/contact', 'ContactController');
+$router->add('/', 'HelloController', 'hello');
+$router->add('/about', 'HelloController', 'hello');
+$router->add('/contact', 'ContactController', 'contactDetails');
 
 //See inside $router
 echo "<pre>";

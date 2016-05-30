@@ -11,6 +11,7 @@ class Router
 {
     private $_uri = array();
     private $_controller = array();
+    private $_method = array();
 
     public function __construct()
     {
@@ -21,10 +22,11 @@ class Router
      * @param $uri
      * @param $controller
      */
-    public function add($uri, $controller)
+    public function add($uri, $controller, $method)
     {
         $this->_uri[] = $uri;
         $this->_controller[] = $controller;
+        $this->_method[] = $method;
     }
 
     public function submit()
@@ -39,7 +41,9 @@ class Router
                 //Instantiate Controller
                 $controller = 'Learn\Controllers\\' . $this->_controller[$key];
                 $controller = new $controller('Bunny');
-                $controller->contactDetails();
+
+                $method = $this->_method[$key];
+                $controller->$method();
             }
         }
 
