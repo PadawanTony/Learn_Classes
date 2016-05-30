@@ -13,4 +13,14 @@ class User extends Person
     {
         parent::__construct($name);
     }
+
+    public function login()
+    {
+        return "Logged in!";
+    }
+
+    public function logout()
+    {
+        return "Logged Out!";
+    }
 }
