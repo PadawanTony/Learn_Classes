@@ -16,9 +16,10 @@ $router = new Router\Router();
 /**
  * Trying with Strings
  */
-$router->add('/', 'HelloController', 'hello');
-$router->add('/about', 'HelloController', 'about');
-$router->add('/contact', 'ContactController', 'contactDetails');
+$router->get('/', 'HelloController', 'hello');
+$router->get('/about', 'HelloController', 'about');
+$router->get('/contact', 'ContactController', 'contactDetails');
+$router->post('/contact', 'ContactController', 'contactDetails');
 
 //See inside $router
 echo "<pre>";
