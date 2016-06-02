@@ -15,11 +15,16 @@ class ContactController
 
     public function __construct()
     {
-        $this->_user = new User('Antony'); //Get name from $_POST
+        $this->_user = new User('Antony'); //Get name from $_POST instead of hardcode
     }
     
     public function contactDetails()
     {
         include __DIR__ . '/../Views/contact.php';
+    }
+    
+    public function postContactDetails()
+    {
+        include __DIR__ . '/../Views/postContact.php';
     }
 }

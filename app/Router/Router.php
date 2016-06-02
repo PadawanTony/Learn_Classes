@@ -68,6 +68,25 @@ class Router
                     $controller->$method();
                 }
             }
+        } elseif ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+            $path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH); //get the url
+
+            foreach ($this->_postUri as $key => $value)
+            {
+                if (preg_match("#^$value$#", $path))
+                {
+                    //echo $key . ' => ' . $value; //See what the $path returns
+
+                    //Instantiate Controller
+                    $controller = 'Learn\Controllers\\' . $this->_postController[$key];
+                    $controller = new $controller();
+
+                    //Call the appropriate method
+                    $method = $this->_postMethod[$key];
+                    $controller->$method();
+                }
+            }
         }
 
     }

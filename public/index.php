@@ -19,7 +19,7 @@ $router = new Router\Router();
 $router->get('/', 'HelloController', 'hello');
 $router->get('/about', 'HelloController', 'about');
 $router->get('/contact', 'ContactController', 'contactDetails');
-$router->post('/contact', 'ContactController', 'contactDetails');
+$router->post('/contact', 'ContactController', 'postContactDetails');
 
 //See inside $router
 echo "<pre>";
