@@ -10,7 +10,7 @@
     <h1> <?php echo "Hello " . $this->_user->getname() . ' From hello.php'; ?> </h1>
 
     <form action="/contact" method="post">
-        <button type="submit" value="POST button">
+        <input type="submit" value="POST button">
     </form>
 </body>
 </html>
