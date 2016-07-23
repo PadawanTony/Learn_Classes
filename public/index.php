@@ -21,7 +21,6 @@ $router->get('/about', 'HelloController', 'about');
 $router->get('/contact', 'ContactController', 'contactDetails');
 $router->post('/contact', 'ContactController', 'postContactDetails');
 
-
 //See inside $router
 echo "<pre>";
 print_r($router);
